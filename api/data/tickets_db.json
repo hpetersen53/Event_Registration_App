@@ -1,0 +1,11 @@
+{
+    "tickets":[{
+        "id" : 1,
+        "fname": "John",
+        "lname": "Smith",
+        "email": "JSmith123@gmail.com",
+        "event": "Event 1",
+        "date": "12/15/2024"
+    }
+
+]}

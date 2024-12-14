@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="front_end_code.js"></script>
+
+    <title>Registrations</title>
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="container">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-ticket-fill"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3z" />
+                </svg>
+                <div class="btn-group">
+                    <a href="/register" class="btn btn-primary">Register For an Event</a>
+                    <a href="/registrations" class="btn btn-primary">View Registrations</a>
+                </div>
+
+            </div>
+        </nav>
+
+
+    </header>
+
+    <h1 class="text-center">Existing Registrations</h1>
+
+    <div class="registration-list">
+
+    
+        <div class="btn-search">
+            <form onsubmit="return false;" id="queryForm">
+                <label for="eventQuery">Search by Event:</label>
+                <input type="text" id="eventQuery" name="eventQuery" value="">
+                <input id="queryByEvent" type="button" onclick="updateView(this)" value="Search" data-querytype="by_event">
+            </form>
+            <form onsubmit="return false;" id="queryForm">
+                <label for="nameQuery">Search by Name:</label>
+                <input type="text" id="nameQuery" name="nameQuery" value="">
+                <input id="queryByName" type="button" onclick="updateView(this)" value="Search" data-querytype="by_name">
+            </form>
+            OR</br>
+            <input id="viewAll" type="button" onclick="updateView(this)" value="View All" class="btn btn-primary" data-querytype="view_all">
+        </div>
+        <div id="results"> 
+        </div>
+
+
+
+    </div>
+
+    </div>
+
+
+
+    <style>
+        body {
+            margin: auto;
+        }
+
+        .btn-group {
+            margin-left: -50px;
+            float: left;
+        }
+
+        .bi {
+            margin-left: -30px;
+        }
+
+        .navbar-brand {
+            padding-left: -20px;
+            margin-left: -50px;
+        }
+
+        h1 {
+            margin-top: 10px;
+        }
+
+        .registration-list {
+            width: 80%;
+            margin: auto;
+        }
+
+        .btn-search {
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+
+        }
+        #results{
+            padding: 10px;
+        }
+        ul{
+            list-style: none;
+        }
+
+        .view-all {
+            width: 40%;
+        }
+    </style>
+
+</body>
+
+</html>
+
+<script id="show_results_view" type="text/x-handlebars-template">
+    <ul>
+        {{#each tickets}}
+        <li>Ticket ID: {{this.id}}    |    Name: {{this.lname}}, {{this.fname}}    |    Event: {{this.event}}</li>
+        {{/each}}
+    </ul>
+
+</script>
