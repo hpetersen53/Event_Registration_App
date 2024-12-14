@@ -52,6 +52,7 @@
             OR</br>
             <input id="viewAll" type="button" onclick="updateView(this)" value="View All" class="btn btn-primary" data-querytype="view_all">
         </div>
+        <hr>
         <div id="results"> 
         </div>
 
@@ -116,7 +117,8 @@
 <script id="show_results_view" type="text/x-handlebars-template">
     <ul>
         {{#each tickets}}
-        <li>Ticket ID: {{this.id}}    |    Name: {{this.lname}}, {{this.fname}}    |    Event: {{this.event}}</li>
+        <li>Ticket ID: {{this.id}}    |    Name: {{this.lname}}, {{this.fname}}    |    Event: {{this.event}}</li><button class="btn btn-primary">Cancel</button>
+        <br>
         {{/each}}
     </ul>
 

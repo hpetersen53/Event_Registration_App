@@ -8,7 +8,7 @@ var updateView = async (button) =>{
         api = `http://localhost:3000/registrations/by_name/${queryValue}`;
     } else if (button.dataset.querytype == 'view_all'){
         let queryValue = document.querySelector('#nameQuery').value;
-        api = `http://localhost:3000/registrations/by_name/${queryValue}`;
+        api = `http://localhost:3000/registrations/view_all/${queryValue}`;
     }
 
     const data = await fetch(api);

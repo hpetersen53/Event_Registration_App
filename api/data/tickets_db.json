@@ -6,6 +6,38 @@
         "email": "JSmith123@gmail.com",
         "event": "Event 1",
         "date": "12/15/2024"
+    },
+    {
+        "id" : 2,
+        "fname": "Mary",
+        "lname": "Smith",
+        "email": "Mary_Smith93@gmail.com",
+        "event": "Event 1",
+        "date": "12/15/2024"
+    },
+    {
+        "id" : 3,
+        "fname": "Martin",
+        "lname": "Roberts",
+        "email": "mroberts_ny@gmail.com",
+        "event": "Event 3",
+        "date": "12/28/2024"
+    },
+    {
+        "id" : 4,
+        "fname": "Emily",
+        "lname": "Brown",
+        "email": "E_Brown77@hotmail.com",
+        "event": "Event 4",
+        "date": "01/05/2025"
+    },
+    {
+        "id" : 5,
+        "fname": "John",
+        "lname": "Matthews",
+        "email": "J0hnMatt72534@gmail.com",
+        "event": "Event 4",
+        "date": "01/05/2025"
     }
 
 ]}
